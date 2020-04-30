@@ -399,7 +399,7 @@ public class SHSim
         {
             return a.hashCode() + b.hashCode();
         }
-
+        @SuppressWarnings("unchecked")
         public boolean equals(Object o)
         {
             if (o.getClass() == Pair.class)
@@ -434,7 +434,7 @@ public class SHSim
         {
             return a.hashCode() + b.hashCode() + c.hashCode();
         }
-
+        @SuppressWarnings("unchecked")
         public boolean equals(Object o)
         {
             if (o.getClass() == Triplet.class)
