@@ -3,6 +3,13 @@ plugins {
 }
 
 
+sourceSets {
+  main {
+    output.resourcesDir = file('bin/main')
+    java.outputDir = file('bin/main')
+  }
+}
+
 sourceCompatibility = 1.8
 
 repositories {
