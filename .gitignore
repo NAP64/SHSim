@@ -1,0 +1,7 @@
+.gradle
+.idea
+.vscode
+*.class
+org.eclipse.*
+/bin/*/
+/bin/*.class

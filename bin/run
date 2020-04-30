@@ -1,0 +1,6 @@
+#!/bin/bash
+
+JAVA_CMD="java -cp .:./bin/main Sim $*"
+
+echo "Running: "$JAVA_CMD
+exec $JAVA_CMD
