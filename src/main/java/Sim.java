@@ -1,6 +1,14 @@
 import base.*;
 import base.SHSim.*;
 
+//A simple basic input example that has three rooms- living room, bedroom1, bedroom2
+//Each room has a windows to outside, two bedrooms has door to living room, and living room has a entrance to outside
+//Google ecosystem is assumed.  
+//A Nest X Yale Lock is installed on the entrance, which connects to Nest Connect in the living room.
+//A Nest WiFi is located in the living room, which connects to the Nest Connect
+//A Nest Cam IQ Indoor camera is installed in bedroom one, with its Nest Aware turned on
+//A Google home is located in bedroom2. All devices are connected to Nest Service, 
+//so devices with Google Assistant can control the door lock
 public class Sim
 {
     static SHSim base;
@@ -132,7 +140,8 @@ public class Sim
         dependent.addDepends(supporter);
         supporter.addSupports(dependent);
     }
-
+    //Helper method that builds a standard Google home object, which has an enclosure, LED, speaker, microphone, button, and mainboard
+    //So a Google Home is modeled as a complex device.
     public static MainBoardObject addGoogleHomeObject(SpaceObject location, SpaceObject[] visible, SpaceObject[] audible, String name, String postfix)
     {
         SpaceObject gh = base.new SpaceObject(name + " " + postfix, name, "");

@@ -4,11 +4,15 @@ import base.SHSim.*;
 
 public class Attacker
 {
+    //Stores breachable types and breach time
     static HashMap<String, Integer> obstacleBreachTime;
+    //Stores accessable types and breach time
     static HashMap<String, Integer> accessTime;
-    //static HashMap<String, Integer> connectionBreachTime;
+    //Stores breachable types and breach time
     static HashMap<String, Integer> deviceBreachTime;
+
     static int moveCost;
+    //Should prevent further analysis if exceed this value. NOT implemented
     static int maxCost;
     static HashMap<SHSimObject, Integer> resultTime;
     static HashMap<SHSimObject, Integer> accessable;
